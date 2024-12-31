@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+}
+
+.countdown-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10rem;
+  color: white;
+  text-shadow: 0 0 20px gold, 0 0 40px red;
+  font-family: "Arial", sans-serif;
+  z-index: 2;
+  animation: glow 1s infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 20px gold, 0 0 40px red;
+  }
+  50% {
+    text-shadow: 0 0 40px yellow, 0 0 60px orange;
+  }
+}
+
+#background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
